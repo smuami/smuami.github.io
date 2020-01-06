@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <title>Seminario del posgrado en Matemáticas de la UAM Iztapalapa</title>
+  <link rel="stylesheet" type="text/css" href="recursos/css/principal.css" />
+  <style>
+
+.calendario{
+  width:100%;
+}
+
+.calendario td {
+  border-collapse:separate;
+}
+
+.calendario thead {
+  background-color:rgb(27, 122, 54);  
+border-left-color:rgb(221, 221, 221);
+border-left-style:solid;
+border-left-width:1px;
+border-top-color:rgb(255, 255, 255);
+border-top-style:none;
+border-top-width:0px;
+color:rgb(255, 255, 255);
+}
+
+.calendario tbody tr:nth-child(odd){
+  background-color:rgb(249, 249, 249);
+}
+  </style>
+</head>
+<body>
+
+   <section id="programa">
+     <h1>Seminario del posgrado en Matemáticas de la UAM Iztapalapa</h1>
+     <table class="calendario">
+         <caption>Programa</caption>
+         <thead>
+           <tr class="charla-renglon">
+             <th class="charla-fecha">Fecha</th>
+             <th class="charla-info">Plática</th>
+           </tr>            
+         </thead>
+         <tbody>                   
+         <tr class="charla-renglon">
+           <td class="charla-fecha">
+                15 de Enero
+           </td>
+           <td class="charla-info">
+             <div class="info-titulo">Dra. persona 1</div>
+             <div class="info-ponente">Nombre persona 1</div>
+             <div class="info-universidad">Titulo plática 1</div>
+           </td>         
+         </tr>
+       </tbody>
+     </table>
+   </section>
+
+</body>
+</html>
