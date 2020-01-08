@@ -4,131 +4,114 @@
 <head>
     <meta charset="UTF-8" />
     <title>Seminario del posgrado en Matemáticas de la UAM Iztapalapa</title>
+    <link href="https://fonts.googleapis.com/css?family=Teko&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="recursos/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="recursos/css/principal.css">
+    <style>
+
+        body{
+            font-family: 'Teko', sans-serif;
+            font-size:20px;
+        }
+
+        #menu{
+            background:#1D9732;
+            background: #1b7a36;
+            height: 100%;
+            position:fixed;
+            text-align: center;
+            width:270px;
+        }
+
+        #contenedor-principal{
+            margin-left: 270px;
+            width:calc(100vw - 270px)
+        }
+
+        /* --- menu ---*/
+
+        .seleccionado{
+            color:#EBB176;
+        }
+
+        #menu ul{
+            color:#f2eebe;
+            font-weight: 500;
+            font-size:25px;
+            list-style: none;
+            letter-spacing: 1px;
+            padding:0px;
+            text-shadow: 0.075em 0.08em 0.1em rgba(0, 0, 0, 1);
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width:270px;
+
+        }
+
+        #menu li{
+            margin-bottom:1em;
+        }
+
+        #logo-seminario img{
+            position:relative;
+            top:4em;
+            width:200px;
+        }
+
+        /* secciones */
+
+        #sec-inicio{
+            background-image: url("recursos/img/fondo1.jpg");
+            background-size: cover;
+            background-position: center center;
+            color:white;
+            height: 100vh;
+            width:100%;
+        }
+
+        #inicio-mensaje{
+            background-color: rgba(0, 0, 0, .5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width:100%;
+            height: 100%;
+        }
+
+        #sec-inicio h1{
+            margin:0px;
+        }
+    </style>
 </head>
-
 <body>
-    <header>
-        <h1 id="titulo-principal">Seminario del posgrado en Matemáticas de la UAM Iztapalapa</h1>
-    </header>
-    <section id="programa" class="show">
-        <table class="calendario">
-            <thead>
-                <tr>
-                    <th class="calendario-fecha">Fecha</th>
-                    <th class="calendario-lugar">Plática</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="charla-fecha">15 de Enero</td>
-                    <td class="charla-info" rowspan="1">
-                        <span class="charla-titulo"><a href="#resumen-1">Topología de Zariski y marcos espaciales para módulos</a></span>
-                        <span class="charla-ponente">Martha Lizbeth Shaid Sandoval</span>                        
-                    </td>
-                </tr>
-                <tr>
-                    <td class="charla-fecha">29 de Enero</td>
-                    <td class="charla-info" rowspan="1">
-                        <span class="charla-titulo"><a href="#resumen-2">Un modelo lineal para estimar matrices OD en transporte público</a></span>
-                        <span class="charla-ponente">María Victoria Chávez Hernández </span>                        
-                    </td>
-                </tr>
-                <tr>
-                    <td class="charla-fecha">12 de Febrero</td>
-                    <td class="charla-info" rowspan="1">
-                        <span class="charla-titulo"><a href="#resumen-3">El curioso caso de las gráficas iteradas de clanes con crecimiento exponencial</a></span>
-                        <span class="charla-ponente">Ismael Ariel Robles Martínez</span>                        
-                    </td>
-                </tr>                
-                <tr>
-                    <td class="charla-fecha">26 de Febrero</td>
-                    <td class="charla-info" rowspan="1">
-                        <span class="charla-titulo"><a href="#resumen-4">De la integral de Riemann a la integral HK</a></span>
-                        <span class="charla-ponente">Manuel Bernal Gonzáles</span>                        
-                    </td>
-                </tr>
-                <tr>
-                    <td class="charla-fecha">11 de Marzo</td>
-                    <td class="charla-info" rowspan="1">
-                        <span class="charla-titulo"><a href="#resumen-5">Título de plática por confirmar</a></span>
-                        <span class="charla-ponente">Mariana Ladrón De Guevara</span>                        
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-
-        <div class="resumen escondido" id="resumen-1">
-            <h2 class="resumen-titulo">Topología de Zariski y marcos espaciales para módulos</h2>
-            <div class="resumen-info">
-                <div class="resumen-ponente"><span>Ponente: </span>Martha Lizbeth Shaid Sandoval</div>
-                <!-- <div class="resumen-afiliacion"><span>Afiliación: </span>Laboratorio de electroquímica</div> -->
-                <div class="resumen-descripcion">
-                    <span>Resumen:</span>
-                    <p>Por anunciar</p>
-                </div>
-                <div class="resumen-regresar"><a href="#program">Regresar al calendario</a></div>
-            </div>
-        </div>
-
-        <div class="resumen escondido" id="resumen-2">
-            <h2 class="resumen-titulo">Un modelo lineal para estimar matrices OD en transporte público</h2>
-            <div class="resumen-info">
-                <div class="resumen-ponente"><span>Ponente: </span>María Victoria Chávez Hernández</div>
-                <!-- <div class="resumen-afiliacion"><span>Afiliación: </span>Laboratorio de electroquímica</div> -->
-                <div class="resumen-descripcion">
-                    <span>Resumen: </span>
-                    <p>Por anunciar</p>
-                </div>
-                <div class="resumen-regresar"><a href="#program">Regresar al calendario</a></div>
-            </div>
-        </div>
-
-
-        <div class="resumen escondido" id="resumen-3">
-            <h2 class="resumen-titulo">El curioso caso de las gráficas iteradas de clanes con crecimiento exponencial</h2>
-            <div class="resumen-info">
-                <div class="resumen-ponente"><span>Ponente: </span>Ismael Ariel Robles Martínez</div>
-                <!-- <div class="resumen-afiliacion"><span>Afiliación: </span>Laboratorio de electroquímica</div> -->
-                <div class="resumen-descripcion">
-                    <span>Resumen: </span>
-                    <p>Por anunciar</p>
-                </div>
-                <div class="resumen-regresar"><a href="#program">Regresar al calendario</a></div>
-            </div>
-        </div>
-
-        <div class="resumen escondido" id="resumen-4">
-            <h2 class="resumen-titulo">De la integral de Riemann a la integral HK</h2>
-            <div class="resumen-info">
-                <div class="resumen-ponente"><span>Ponente: </span>Manuel Bernal Gonzáles</div>
-                <!-- <div class="resumen-afiliacion"><span>Afiliación: </span>Laboratorio de electroquímica</div> -->
-                <div class="resumen-descripcion">
-                    <span>Resumen: </span>                
-                    <p>Por anunciar</p>
-                </div>
-                <div class="resumen-regresar"><a href="#program">Regresar al calendario</a></div>
-            </div>
-        </div>
-
-
-        <div class="resumen escondido" id="resumen-5">
-            <h2 class="resumen-titulo">Título de plática por confirmar</h2>
-            <div class="resumen-info">
-                <div class="resumen-ponente"><span>Ponente: </span>Mariana Ladrón De Guevara</div>
-                <!-- <div class="resumen-afiliacion"><span>Afiliación: </span>Laboratorio de electroquímica</div> -->
-                <div class="resumen-descripcion">
-                    <span>Resumen: </span>
-                    <p>Por anunciar</p>
-                </div>
-                <div class="resumen-regresar"><a href="#program">Regresar al calendario</a></div>
-            </div>
-        </div>
-
-    </section>
+ <aside id="menu">
+   <nav>
+    <div id="logo-seminario">
+        <img src="recursos/img/logoSPd.png"/>
+    </div>
+    <ul>
+        <li class="seleccionado">INICIO</li>
+        <li>CALENDARIO</li>
+        <li>ORGANIZADORES</li>
+        <li>CONTACTO</li>
+    </ul>
+</nav>
+</aside>
+<main id="contenedor-principal">
+   <section id="sec-inicio" class="seccion">
+    <div id="inicio-mensaje">
+        <h1>Seminario del posgrado en matemáticas de la UAM Iztapalapa</h1>
+    </div>
+</section>
+<section id="sec-calendario" class="seccion">
+</section>
+<section id="sec-organizadores" class="seccion">
+</section>
+<section id="sec-contacto" class="seccion">
+</section>
+</main>
 </body>
-
 </html>
 <script src="//code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="recursos/js/principal.js"></script>
