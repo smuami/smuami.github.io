@@ -1,19 +1,3 @@
-//general
-$(function(){
-    $("#menu li a").click(function(evento) {
-       var enlace = $(evento.target);
-       var seccion = $(enlace.attr("href"));
-       if(enlace.length){
-
-       $('html, body').animate({
-          scrollTop: seccion.offset().top
-       }, 1000);
-
-       }
-    });
-});
-
-//calendario
  $(function() {
 
         var calendario = $(".calendario");
@@ -44,4 +28,4 @@ $(function(){
             return false;
         });
 
-});
+    });
