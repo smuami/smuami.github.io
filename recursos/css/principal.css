@@ -85,13 +85,17 @@ ul {
     background-color: rgba(0, 0, 0, .5);
     display: flex;
     justify-content: center;
-    letter-spacing: 1.2px;
+    letter-spacing: 1.2px;    
     width: 100%;
     height: 100%;
+    text-shadow:2px 2px 3px black;
 }
 
-#inicio h1 {
+#inicio-mensaje h1 {
     margin: 0px;
+    padding-left:1em;
+    padding-right:1em; 
+    text-align: center;
 }
 
 
@@ -205,8 +209,15 @@ ul {
 .resumen-regresar a,
 .resumen-regresar a:visited,
 .charla-titulo a,
-.charla-titulo a:visited {
+.charla-titulo a:visited {    
     color: #34630f;
+    display:inline-block;
+    transition: all .3s ease-in-out;
+}
+
+.charla-titulo a:hover,
+.resumen-regresar a:hover{
+    transform: scale(1.1);
 }
 
 .resumen {
@@ -234,19 +245,17 @@ ul {
 }
 
 .resumen-ponente,
-.resumen-descripcion span {
-    font-size: 1.2em;
-    margin-top: 1em;
-}
-
-.resumen-afiliacion {
+.resumen-afiliacion,
+.resumen-emails,
+.resumen-descripcion-titulo {
     font-size: 1.2em;
     margin-top: 1em;
 }
 
 .resumen-ponente span,
 .resumen-afiliacion span,
-.resumen-descripcion span {
+.resumen-emails span,
+.resumen-descripcion-titulo {
     font-weight: bold;
 }
 
@@ -255,9 +264,23 @@ ul {
     line-height: 1.5em;
 }
 
+/*--------- resumen:bibliografia ---------*/
+
+.bibitem-titulo{
+    font-style: italic;
+    font-weight: 600;
+}
+
+.bibitem-codigo{    
+}
+
+.bibitem-autores{}
+.bibitem-journal{}
+
 .resumen-regresar {
+    font-size: 1.3em;
     text-align: center;
-    margin-top: 2em;
+    margin-top: 2em;   
 }
 
 .mostrar {
@@ -271,7 +294,7 @@ ul {
     transition: opacity 1000ms;
 }
 
-.escondido {
+.oculto {
     display: none;
 }
 /*------------- organizadores -----------*/
@@ -285,10 +308,14 @@ ul {
     background: #0040C1;
     background: #FFA700;
     background: #012A35;
+    background: #4D004D;
+    background: #03234E;
+    background: #3A67A5;    
     color: #f5f5f5;
     font-size: 30px;
     min-height: 100vh;
     position: relative;
+    text-shadow:2px 2px 3px black;
 }
 
 .organizador-nombre, .organizador-pagweb{
@@ -327,6 +354,8 @@ ul {
     position: relative;
     color: #222;
     text-shadow: 0px 2px 3px #555;
+    padding-left:1.5em;
+    padding-right: 1em;
     padding-top: 3em;
     padding-bottom: 4em;
 }
@@ -362,6 +391,18 @@ ul {
 }
 
 /*---  EFECTOS ----*/
+
+#caja-loading{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background:#f5f5f5; 
+    position:fixed;
+    height:100vh;
+    text-align: center;
+    width:100vw;  
+    z-index: 1000;  
+}
 
 .circulo-anim {
     position: absolute;
