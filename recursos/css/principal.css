@@ -10,7 +10,8 @@ ul {
 
 #menu {
     background: #1D9732;
-    background: #1b7a36;            
+    background: #1b7a36;  
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);          
     height: 100%;
     position: fixed;    
     text-align: center;
