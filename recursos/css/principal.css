@@ -74,6 +74,7 @@ ul {
     background-image: url("../img/fondo1.jpg");
     background-size: cover;
     background-position: center center;
+    background-attachment: fixed;
     color: #f5f5f5;
     font-size: 30px;
     height: 100vh;
@@ -294,7 +295,7 @@ ul {
 }
 
 .oculto {
-    display: none !important;
+    display: none;
 }
 /*------------- organizadores -----------*/
 
@@ -390,6 +391,10 @@ ul {
 }
 
 /*---  EFECTOS ----*/
+
+#boton-menu-responsive{
+    display: none;
+}
 
 #caja-loading{
     align-items: center;
@@ -572,7 +577,7 @@ ul {
     #logo-seminario img{
         position:relative;
         height:50px;
-        top:15px; /*TODO: sustituir con calc*/
+        top:15px; /*TODO: sustituir con calc o probar vertical-align??*/
         width:auto;
     }
 
@@ -580,7 +585,7 @@ ul {
         height: 40px;
         width:auto;
         position:relative;
-        top:12px; /*TODO: sustituir con calc*/
+        top:12px; /*TODO: sustituir con calc  o probar vertical-align??*/
     }
 
 }
@@ -606,6 +611,77 @@ ul {
     }
 }
 
-@media only screen and (max-width: 900px) {
+/* si el ancho es muy angosto, activa el menu responsivo*/
+@media only screen and (max-width: 900px) {    
 
+  #inicio{
+    background-attachment: scroll;
+  }
+
+  #inicio, #organizadores, #contacto{
+    font-size: 20px;
+  }
+
+  #calendario{
+    font-size: 16px;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  .resumen-info{
+    padding-left: 1em;
+    padding-right: 1em; 
+  }
+
+  .menu-oculto-en-mediaquery{
+    top:-500px !important;
+    /* transition: top .3s ease-in-out; */
+  }
+
+  #boton-menu-responsive{
+      border-right: 1px solid #5a962a;
+      cursor:pointer;
+      display:block;
+      line-height: 80px;
+      font-size:50px;
+      float:left;
+      width:60px;
+      text-align: center;
+      vertical-align: middle;      
+  }
+
+  #menu nav{
+    text-align: left;
+  }
+
+  #logo-seminario{
+    display:block;
+    text-align: center;
+    margin:0px;
+    width:100%;
+  }
+
+  #logo-seminario img{
+    display:inline-block;
+  }
+
+  #menu{
+    z-index: 100;
+  }
+
+  #menu ul{
+    background: #CDCDCD;
+    position:absolute;
+    top:80px;
+    /* transition: top .3s ease-in-out; */
+    width:100%;
+  }
+
+  #menu li{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    display: block;
+    margin:0px;
+    text-align: center;
+  }
 }
+

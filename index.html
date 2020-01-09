@@ -12,18 +12,19 @@
 
 <body>    
 
-    <div id="caja-loading">
+    <div id="caja-loading" class="oculto">
         <div>
             <img src="recursos/img/loading2.gif" />
             <h1>Leyendo...</h1>
         </div>
     </div>
     <aside id="menu">
-        <nav>
+        <nav>            
+            <span id="boton-menu-responsive">☰</span>
             <div id="logo-seminario">
                 <img src="recursos/img/logoSPd.png" />
             </div><!--
-            --><ul>
+            --><ul class="menu-oculto-en-mediaquery">
                 <li class="seleccionado"><a href="#inicio">INICIO</a></li>
                 <li><a href="#calendario">CALENDARIO</a></li>
                 <li><a href="#organizadores">ORGANIZADORES</a></li>
