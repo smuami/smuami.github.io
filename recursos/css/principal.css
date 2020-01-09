@@ -18,6 +18,10 @@ ul {
     width: 270px;
 }
 
+#boton-menu-responsive{
+    color: #f5f5f5;
+}
+
 #contenedor-principal {
     margin-left: 270px;
     width: calc(100vw - 270px)
