@@ -12,7 +12,7 @@ ul {
     background: #1D9732;
     background: #1b7a36;            
     height: 100%;
-    position: fixed;
+    position: fixed;    
     text-align: center;
     width: 270px;
 }
@@ -185,8 +185,7 @@ ul {
 }
 
 .charla-info {
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding:1em;
 }
 
 .charla-titulo,
@@ -295,7 +294,7 @@ ul {
 }
 
 .oculto {
-    display: none;
+    display: none !important;
 }
 /*------------- organizadores -----------*/
 
@@ -355,7 +354,7 @@ ul {
     color: #222;
     text-shadow: 0px 2px 3px #555;
     padding-left:1.5em;
-    padding-right: 1em;
+    padding-right: 1.5em;
     padding-top: 3em;
     padding-bottom: 4em;
 }
@@ -484,8 +483,8 @@ ul {
 
 .circulo-anim:nth-child(10) {
     left: 85%;
-    width: 150px;
-    height: 150px;
+    width: 50px;
+    height: 50px;
     animation-delay: 0s;
     animation-duration: 11s;
 }
@@ -501,4 +500,112 @@ ul {
         opacity: 0;
         border-radius: 50%;
     }
+}
+
+
+/* ------- MEDIA QUERIES --------------*/
+
+/*- remover espacios laterales en menu */
+@media only screen and (max-width: 1300px) {
+ 
+    #menu{
+      width: 210px;   
+    }
+
+    #contenedor-principal{
+        margin-left: 210px;
+        width: calc(100vw - 210px)
+    }
+
+    #menu ul {
+        width:210px;
+    }
+
+    #logo-seminario img{
+        width:140px;
+    }
+}
+
+/*- mostrar menu en barra horizontal */
+@media only screen and (max-width: 1100px) {
+
+    #menu{        
+        width:100%;
+        z-index: 100;
+    }
+
+    #menu, #menu nav, #logo-seminario{
+        height:80px;    
+    }
+
+    #menu, #menu nav, #logo-seminario, #menu ul, #menu li, #menu a{
+        line-height: 80px;
+        margin-bottom: 0px;
+    }    
+
+    #contenedor-principal{
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    #menu ul {
+        width:auto;
+    }
+
+    #menu li{
+        display:inline-block;
+        margin-right: 1em;
+    }
+
+    #logo-seminario{
+        display: inline-block;
+        margin-right: 1em;
+    }
+
+    #logo-seminario img, #menu ul{
+        display:inline-block;
+        position:static;        
+        top: 0;
+        transform: translateY(0);        
+    }
+
+    #logo-seminario img{
+        position:relative;
+        height:50px;
+        top:15px; /*TODO: sustituir con calc*/
+        width:auto;
+    }
+
+    #redes img{
+        height: 40px;
+        width:auto;
+        position:relative;
+        top:12px; /*TODO: sustituir con calc*/
+    }
+
+}
+
+/* 
+   si el ancho es lo suficente como para que no se muestre el menu horizontal
+   pero el alto es muy pequeño, acomodar logo del seminario
+*/
+@media only screen and (max-height: 650px) and (min-width: 1100px) {
+    #logo-seminario img{
+        top:10px;
+    }
+}
+
+
+/* 
+   si el ancho es lo suficente como para que no se muestre el menu horizontal
+   pero el alto es EXREMADAMENTE PEQUEÑO, desaparece logo del seminario
+*/
+@media only screen and (max-height: 480px) and (min-width: 1100px) {
+    #logo-seminario{
+        display:none;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
 }
