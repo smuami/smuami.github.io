@@ -302,6 +302,15 @@ ul {
 .oculto {
     display: none;
 }
+
+.resumen-descargas{
+    text-align: center;
+}
+
+.resumen-descargas a{
+    display:inline-block;    
+    margin-right: 3em;
+}
 /*------------- organizadores -----------*/
 
 #organizadores {
